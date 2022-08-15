@@ -30,7 +30,7 @@ def get_user_by_username(db: Session, username: str):
     if not user:
         raise HTTPException(status_code = status.HTTP_404_NOT_FOUND,
         detail = f'User with username {username} not found')
-    return user # make new display model for the current user
+    return user # make new display model for the current user in order to hide the token
 
 def update_user(db: Session, id: int, request: UserBase):
     user = db.query(DBUser).filter(DBUser.id == id)

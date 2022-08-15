@@ -11,7 +11,7 @@ def create_article(db: Session, request: ArticleBase):
     new_article = DBArticle(
         title = request.title,
         content = request.content,
-        publised = request.published,
+        published = request.published,
         user_id = request.creator_id
     )
     db.add(new_article)
