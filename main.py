@@ -18,7 +18,7 @@ app.include_router(authentication.router)
 
 @app.get('/')
 def index():
-    return {"message": "Hello world!"}
+    return {"message": "For the API, please go to /docs"}
 
 @app.exception_handler(StoryException)
 def story_exception_handler(request: Request, exc: StoryException):
